@@ -1,0 +1,40 @@
+<body>
+  <section class="showcase">
+    <header>
+      <h2 class="logo">DownTown</h2>
+      <div class="toggle"></div>
+    </header>
+    <video src="/media/Pexels Videos 1943483.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>Never Try To </h2> 
+      <h3>Limit Yourself </h3>
+      <p>Here book your required act and make
+          your event worth presenting and let 
+          the world enjoy with your gracefull
+          acts in party.
+      </p>
+      <a href="/dashboard">Explore</a>
+    </div>
+    <ul class="social">
+      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <% if(usertype==="performer"){ %>
+        <li><a href="#">Register your club</a></li>
+      <% } %>  
+      <% if(usertype==="user"){ %>
+        <li><a href="/dashboard">List Our Services</a></li>
+      <% } %>  
+      <li><a href="#">Profile</a></li>
+      <li><a href="/logout">Log Out</a></li>
+    </ul>
+  </div>
+</body>
+
+
