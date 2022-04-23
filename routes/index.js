@@ -3,7 +3,6 @@ const router = express.Router()
 
 router.get('/',(req,res)=>{
     console.log(req.locals);
-    if(res.locals.user){
     let usertype
     if(res.locals.user){
         usertype = res.locals.user.usertype

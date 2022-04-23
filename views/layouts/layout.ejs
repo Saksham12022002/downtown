@@ -54,6 +54,9 @@
       <link rel="stylesheet" href="/css/afterlogin.css">
     <% } %>
     
+    <% if(locals.fileused != null && locals.fileused == "performers") { %>
+      <link rel="stylesheet" href="/css/page1.css">
+    <% } %>
 
     <!-- <script src="js/index.js"></script> -->
 
@@ -70,6 +73,9 @@
       <script defer src="/js/page.js"></script>
     <% } %>
 
+    <% if(locals.fileused != null && locals.fileused == "performers") { %>
+      <script defer src="/js/regperform.js"></script>
+    <% } %>
 
 
     <script defer src="/js/loginreq.js"></script>

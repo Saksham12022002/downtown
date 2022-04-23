@@ -16,6 +16,7 @@ const {requireauth,checkuser} = require("./middleware/authmiddleware")
 const Authrouter  = require('./routes/authcontroller')
 const Indexrouter = require('./routes/index')
 const Dashboardrouter = require('./routes/dashboard/dashboard')
+const regperformrouter = require('./routes/performer/regperform')
 
 
 
@@ -60,6 +61,7 @@ connectDB();
 app.use(Authrouter)
 app.use('/',Indexrouter)
 app.use('/dashboard',Dashboardrouter)
+app.use('/regperform',regperformrouter)
 
 app.listen(process.env.PORT || 3000,(err)=>{
     if(err)console.log(err)

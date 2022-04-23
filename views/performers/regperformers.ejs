@@ -1,0 +1,62 @@
+<body>
+    <div class="wrapper">
+        <div class="title">
+          Registration Form
+        </div>
+        <form action="/regperform" class="form regperform">
+           <div class="inputfield">
+              <label> Name</label>
+              <input type="text" name="name" class="input">
+           </div>  
+            <div class="inputfield">
+              <label>Phone No.</label>
+              <input type="text" name="mobile" class="input">
+           </div>  
+           <div class="inputfield">
+              <label>Address</label>
+              <input type="text" name="location" class="input">
+           </div>  
+          <div class="inputfield">
+              <label>Description</label>
+              <input type="text" name="desc" class="input">
+           </div> 
+            <div class="inputfield">
+              <label>Category</label>
+              <div class="custom_select">
+                <select name="category">
+                  <option value="">Select</option>
+                  <option value="music">Music</option>
+                  <option value="Dance">Dance</option>
+                  <option value="Oration">Oration</option>
+                  <option value="Photography">Photography</option>
+                </select>
+              </div>
+           </div> 
+           
+          <div class="inputfield">
+              <label>fees</label>
+              <div class="price-input">
+                <div class="field">
+                  <span>Start</span>
+                  <input type="number" name="upperfees" class="input-min"value=" ">
+                </div>
+                <div class="field">
+                  <span>End </span>
+                  <input type="number" name="lowerfees" class="input-max"value=" ">
+                </div>
+              </div>
+           </div> 
+          <div class="inputfield terms">
+              <label class="check">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <p>Solo performer</p>
+           </div> 
+          <div class="inputfield">
+            <input type="submit" value="Register" class="btn">
+          </div>
+        </form>
+    </div>    
+</body>
+

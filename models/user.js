@@ -7,6 +7,15 @@ const userSchema = new mongoose.Schema({
         type:String,
         unique:true,
     },
+    name:{
+        type:String,
+    },
+    desc:{
+        type: String,
+    },
+    category:{
+        type: String
+    },
     admin :{
         type:Boolean,
         default:false
@@ -34,6 +43,12 @@ const userSchema = new mongoose.Schema({
     },
     mobile:{
         type: String,
+    },
+    upperfees:{
+        type: Number
+    },
+    lowerfees:{
+        type: Number
     },
     bookings:[{
         bookingid:{
