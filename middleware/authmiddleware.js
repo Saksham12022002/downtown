@@ -28,15 +28,11 @@ const requireauth = (req,res,next)=>{
 
 //check current user
 const checkuser = (req,res,next)=>{
-    console.log("using check user");
     const token  = req.cookies.jwt
     if(!req.user)
     {
-        console.log("user does not exist")
-
         if(token)
         {
-            console.log("token exist");
             jwt.verify(token,"white Hat wale",async (err,decodedToken)=>{
                 if(err){
                     res.locals.user=null
@@ -51,14 +47,12 @@ const checkuser = (req,res,next)=>{
                 }
             })
         }else{
-            console.log("token does not exist");
             res.locals.user=null
             res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, post-check=0, pre-check=0');
             next()
         }
     }
     else{
-        console.log("user does not exist");
         res.locals.user = req.user
         res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, post-check=0, pre-check=0');
         next()

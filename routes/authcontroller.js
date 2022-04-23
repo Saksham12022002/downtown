@@ -81,7 +81,7 @@ router.post("/signup",async(req,res)=>{
     const admin = false
     try {
         console.log("no error before");
-        const newuser = await User.create({username,admin,email,password})
+        const newuser = await User.create({username,admin,email,password,usertype})
         const user = await User.login(email,password)
         console.log("no error atfter");
         const token = createtoken(user._id)
