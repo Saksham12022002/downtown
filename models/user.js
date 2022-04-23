@@ -23,6 +23,10 @@ const userSchema = new mongoose.Schema({
         required:[true,"Please enter an password"],
         minlength:[4,"Minimum password is 4 characters"]
     },
+    usertype:{
+        type:String,
+        required:[true,"Please enter a usertype"],
+    },
     location:{
         type: String,
         default:"Prayagraj",
