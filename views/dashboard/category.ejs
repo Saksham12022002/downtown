@@ -1,0 +1,32 @@
+
+<body>
+
+<div class="wrapper">
+	<div class="links">
+		<ul>
+			<li data-view="list-view" class="li-list active">
+			<i class="fas fa-th-list"></i>
+			<%= category %> </li>
+		</ul>
+	</div>
+    <div class="view_main">
+	<div class="view_wrap list-view" style="display: block;">
+	<% performers.forEach(performer => { %>
+			<div class="view_item">
+				<div class="vi_left">
+					<img src="albert-dera-ILip77SbmOE-unsplash.jpg" alt="vediography">
+				</div>
+				<div class="vi_right">
+					<p class="title"><%= performer.name %></p>
+					<p class="content"><%= performer.desc %></p>
+					<a href="/dashboard/booknow/<%= performer._id %>"><div class="btn">View More</div></a>
+				</div>
+			</div>
+    <% }); %>
+    </div>
+    </div> 
+	
+</div>
+
+
+</body>

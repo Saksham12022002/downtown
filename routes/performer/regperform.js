@@ -13,11 +13,11 @@ router.get('/',(req,res)=>{
 })
 
 router.post("/",async(req,res)=>{
-    const {mobile,location,desc,category,upperfees,lowerfees} = req.body
+    const {name,mobile,location,desc,category,upperfees,lowerfees} = req.body
     try {
         console.log(res.locals.user);
 
-        const updatedPost = {mobile,location,desc,category,upperfees,lowerfees}
+        const updatedPost = {name,mobile,location,desc,category,upperfees,lowerfees}
         await User.findByIdAndUpdate(res.locals.user._id, updatedPost, { new: true });
         const user = await User.findOne({_id: res.locals.user._id})
         res.status(201).json(user)

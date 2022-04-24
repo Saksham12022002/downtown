@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <!-- ------------ AOS Library ------------------------- -->
     <link rel="stylesheet" href="/css/aos.css">
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 
@@ -23,6 +24,8 @@
     <script defer src="/js/Jquery3.4.1.min.js"></script>
     <!-- --------- Owl-Carousel js ------------------->
     <script defer src="/js/owl.carousel.min.js"></script>
+
+    <script defer src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
     <!-- ------------ AOS js Library  ------------------------- -->
     <script defer src="/js/aos.js"></script>
@@ -58,6 +61,14 @@
       <link rel="stylesheet" href="/css/page1.css">
     <% } %>
 
+    <% if(locals.fileused != null && locals.fileused == "category") { %>
+      <link rel="stylesheet" href="/css/seachlist.css">
+    <% } %>
+    
+    <% if(locals.fileused != null && locals.fileused == "booking") { %>
+      <link rel="stylesheet" href="/css/performerform.css">
+    <% } %>
+
     <!-- <script src="js/index.js"></script> -->
 
     
@@ -76,6 +87,15 @@
     <% if(locals.fileused != null && locals.fileused == "performers") { %>
       <script defer src="/js/regperform.js"></script>
     <% } %>
+
+    <% if(locals.fileused != null && locals.fileused == "category") { %>
+      <script defer src="/js/scripts.js"></script>
+    <% } %>
+
+    <% if(locals.fileused != null && locals.fileused == "booking") { %>
+      <script defer src="/js/booking.js"></script>
+    <% } %>
+
 
 
     <script defer src="/js/loginreq.js"></script>

@@ -23,7 +23,7 @@ regperform.addEventListener("submit",async(e)=>{
         console.log("trying");
         const res = await fetch("/regperform",{
             method:"POST",
-            body: JSON.stringify({mobile,location,desc,category,upperfees,lowerfees}),
+            body: JSON.stringify({name,mobile,location,desc,category,upperfees,lowerfees}),
             headers:{"Content-type":'application/json'} 
         })
         const data = await res.json()

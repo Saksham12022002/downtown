@@ -1,0 +1,46 @@
+
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Performer's booking Form
+    </div>
+    <form action="/dashboard/booknow/<%= performer._id %>" class="form bookingform">
+      <div class="inputfield">
+        <label>Name</label>
+        <label class="text"><%= performer.name %></label>
+     </div> 
+     <div class="inputfield">
+      <label>Bio</label>
+      <label class="text"><%= performer.desc %></label>
+   </div> 
+   <div class="inputfield">
+    <label>Contact</label>
+    <label class="text"><%= performer.mobile %></label>
+ </div> 
+       <div class="inputfield">
+          <label>Date</label>
+          <input type="date" name="bookingdate" class="input">
+       </div>  
+      <div class="inputfield">
+          <label>Details</label>
+          <textarea name="description" class="textarea"></textarea>
+       </div> 
+       <div class="inputfield">
+        <label>Price</label>
+        <label class="text"><%= performer.upperfees %> - <%= performer.lowerfees %></label>
+     </div> 
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" value="BookNow" class="btn">
+      </div>
+    </form>
+</div>	
+	
+</body>

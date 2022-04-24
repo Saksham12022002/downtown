@@ -2,15 +2,15 @@ const mongoose = require('mongoose')
 
 const bookingSchema = new mongoose.Schema({
     bookedby:{
-        type:String,
-        required:true
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
     },
     bookedfor:{
-        type:String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true
     },
     bookingdate:{
-        type:Date,
+        type:String,
         required:true
     },
     description:{
@@ -24,8 +24,9 @@ const bookingSchema = new mongoose.Schema({
     },
 
     status:{
-        type: string
+        type: String,
+        default: "Pending"
     }
 })
 
-module.exports = mongoose.model('Bookings',bookingSchema)
+module.exports = mongoose.model('Booking',bookingSchema)
