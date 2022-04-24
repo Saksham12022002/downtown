@@ -9,6 +9,14 @@ const bookingSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
+    bookedbyName:{
+        type: String,
+        required: true
+    },
+    bookedforName:{
+        type: String,
+        required: true
+    },
     bookingdate:{
         type:String,
         required:true

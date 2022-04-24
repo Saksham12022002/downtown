@@ -17,6 +17,8 @@ const Authrouter  = require('./routes/authcontroller')
 const Indexrouter = require('./routes/index')
 const Dashboardrouter = require('./routes/dashboard/dashboard')
 const regperformrouter = require('./routes/performer/regperform')
+const myappointmentrouter  = require('./routes/appointments/myappointment')
+const previousappointmentrouter  = require('./routes/appointments/previousappointment')
 
 
 
@@ -62,6 +64,8 @@ app.use(Authrouter)
 app.use('/',Indexrouter)
 app.use('/dashboard',Dashboardrouter)
 app.use('/regperform',regperformrouter)
+app.use(myappointmentrouter)
+app.use(previousappointmentrouter)
 
 app.listen(process.env.PORT || 3000,(err)=>{
     if(err)console.log(err)

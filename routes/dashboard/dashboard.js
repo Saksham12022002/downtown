@@ -38,7 +38,7 @@ router.get('/booknow/:id',async (req,res)=>{
     if(res.locals.user){
         try { 
             let performer  = await User.find({_id:req.params.id})
-            console.log(performer);
+            // console.log(performer);
             res.render('dashboard/booking',{
                 fileused: "booking",
                 performer: performer[0],
@@ -56,17 +56,27 @@ router.post('/booknow/:id',async (req,res)=>{
     if(res.locals.user){
         let {description,bookingdate} = req.body
         console.log(bookingdate,typeof(bookingdate));
+        const performer = await User.find({_id:req.params.id})
+        console.log("performer ,",performer[0].name, typeof(performer[0].name));
         try { 
             let booking = {
                 bookedby: res.locals.user._id,
+                bookedbyName: res.locals.user.username,
+                bookedforName: performer[0].name,
                 bookedfor: req.params.id,
                 description: description,
                 bookingdate: bookingdate
             }
             try {
                 const newbooking = new Booking(booking)
-                console.log(newbooking);
+                await Booking.create(newbooking)
+                console.log('booking ho gai bhai');
+                console.log("newbooking ,",newbooking);
+                res.redirect('/dashboard')
+                
+
             } catch (error) {
+                console.log("idhar dekh bhai");
                 console.log(error);
             }
         } catch (error) {

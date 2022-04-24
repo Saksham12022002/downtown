@@ -49,13 +49,7 @@ const userSchema = new mongoose.Schema({
     },
     lowerfees:{
         type: Number
-    },
-    bookings:[{
-        bookingid:{
-            type: mongoose.Schema.Types.ObjectId
-        },
-        
-    }]
+    }
 
 })
 

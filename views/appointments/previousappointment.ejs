@@ -1,0 +1,36 @@
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/" id="back">Back</a>
+        <a href="/profile" class="active">Saksham</a>
+        <a href="#news">My Bookings</a>
+        <a href="#contact">My appointments</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="header_fixed">
+        <table>
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Date</th>
+                    <th>Booked By</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let count=0 %> 
+                <% appointments.forEach(appointment=>{ %>
+                    <% count++ %> 
+                    <tr>
+                        <td><%= count %> </td>
+                        <td><%= appointment.bookingdate %> </td>
+                        <td><%= appointment.bookedbyName  %> </td>
+                        <td><%= appointment.status  %></td>
+                        <td><button>View</button></td>
+                    </tr>
+                <% }) %> 
+            </tbody>
+        </table>
+    </div>
+</body>

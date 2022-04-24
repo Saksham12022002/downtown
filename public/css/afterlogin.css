@@ -110,11 +110,6 @@ div .dropdown .dropbtn {
   color: white;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
-
 body::before{
   content: '';
   position: absolute;
@@ -124,7 +119,6 @@ body::before{
   z-index: -1;
   height: 100%;
 }
-
 ::selection{
   background:	#FF676D;
   color: #fff;

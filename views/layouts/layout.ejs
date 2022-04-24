@@ -69,6 +69,14 @@
       <link rel="stylesheet" href="/css/performerform.css">
     <% } %>
 
+    <% if(locals.fileused != null && locals.fileused == "performerpending") { %>
+      <link rel="stylesheet" href="/css/performerstatus.css">
+    <% } %>
+
+    <% if(locals.fileused != null && locals.fileused == "previous") { %>
+      <link rel="stylesheet" href="/css/status.css">
+    <% } %>
+
     <!-- <script src="js/index.js"></script> -->
 
     
